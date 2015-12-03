@@ -54,9 +54,9 @@
                         <label>Nome</label><br />
                         <input type="input" name="name" class="all-100"><br />
                         <label>E-mail</label><br />
-                        <input type="input" name="_replyto" class="all-100"><br />
+                        <input type="input" name="email" class="all-100"><br />
                         <label>Mensagem</label><br />
-                        <textarea name="mensagem" class="all-100"></textarea>
+                        <textarea name="message" class="all-100"></textarea>
                         <br /><br />
                         <button type="submit" class="push-right">Enviar</button>
                     </form>
@@ -95,7 +95,14 @@
             $.ajax({
                 url: "//formspree.io/izaguerreiro@gmail.com", 
                 method: "POST",
-                data: {message: "Mensagem enviada com sucesso!"},
+                data: $.param({
+                    name: name,
+                    email: email,
+                    message: message
+                }),
+                success: function(data){
+                    alert("Mensagem enviada com sucesso!");
+                },
                 dataType: "json"
             });
         }
