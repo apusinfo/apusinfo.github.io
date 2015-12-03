@@ -50,7 +50,7 @@
             <div class="all-85 push-center">
                 <div class="all-100 grid-texto-sobre">
                     <h4>Contato</h4>
-                    <form action="http://formspree.io/izaguerreiro@gmail.com" method="post" class="ink-form">
+                    <form onsubmit="send_mail()" method="post" class="ink-form">
                         <label>Nome</label><br />
                         <input type="input" name="name" class="all-100"><br />
                         <label>E-mail</label><br />
@@ -91,7 +91,7 @@
     </body>
 
     <script type="text/javascript">
-        var send_mail = function(){
+        function send_mail(){
             $.ajax({
                 url: "//formspree.io/izaguerreiro@gmail.com", 
                 method: "POST",
