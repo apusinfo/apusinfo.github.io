@@ -26,11 +26,38 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
+    <script type="text/javascript">
+    (function(){
       emailjs.init("user_kLou1ltlyUXPambNW7R13");
-   })();
+  })();
+
+function Email(){
+  $.ajax({
+    type: "POST",
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    data: {
+      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
+      'message': {
+        'from_email': 'tecsof@terra.com.br',
+        'to': [
+          {
+            'email': 'tecsof@terra.com.br',
+            'name': 'Apus.info',
+            'type': 'to'
+          }
+        ],
+        'subject': 'Testando titulo',
+        'html': 'Testando texto'
+      }
+    }
+  });
+}
+
+
+
 </script>
+
+
 
 </head><!--/head-->
 
@@ -59,7 +86,7 @@
                       <!--   <li class="scroll"><a href="#meet-team">Team</a></li> 
                         <li class="scroll"><a href="#pricing">Pricing</a></li>
                         <li class="scroll"><a href="#blog">Blog</a></li> -->
-                         <li class="scroll"><a href="educ.html">EDUC</a></li>
+                        <li class="scroll"><a href="educ.html">EDUC</a></li>
                         <li class="scroll"><a href="#get-in-touch">Contato</a></li>                        
                     </ul>
                 </div>
@@ -92,7 +119,7 @@
                             <div class="col-sm-4">
                                 <div class="carousel-content">
                                     <h2 align="center"> <span>Somos Especializados em sistemas acadêmicos</h2>
-                                  <!--  <p>Há mais de 15 desenvolvendo sistemas especializados para controle academico publico</p> -->
+                                    <!--  <p>Há mais de 15 desenvolvendo sistemas especializados para controle academico publico</p> -->
                                     <a class="btn btn-primary btn-lg btn-block" href="#get-in-touch">Entre em contato</a>
                                 </div>
                             </div>
@@ -112,15 +139,15 @@
                 <div class="col-sm-9">
                     <h2>Um pouco sobre nós</h2>
                     <p>A Apus nasce de uma junção de empresas de Tecnologia da Informação e Consultoria com o propósito de levar a mais alta tecnologia para maior eficiência no trato das informações de seus clientes. 
-                       Somando os esforços destas empresas a Apus conta com mais de 15 anos de atuação no mercado de TI, tanto na área pública quanto na área privada
-                   </p>
-               </div>
-               <div class="col-sm-3 text-right">
-                 <a class="btn btn-primary btn-lg" href="#get-in-touch">Entre em contato</a>
+                     Somando os esforços destas empresas a Apus conta com mais de 15 anos de atuação no mercado de TI, tanto na área pública quanto na área privada
+                 </p>
              </div>
-         </div>
-     </div>
- </section><!--/#cta-->
+             <div class="col-sm-3 text-right">
+               <a class="btn btn-primary btn-lg" href="#get-in-touch">Entre em contato</a>
+           </div>
+       </div>
+   </div>
+</section><!--/#cta-->
 
 <!--
     <section id="features">
@@ -212,7 +239,7 @@
                             <div class="media-body">
                                 <h4 class="media-heading">EDUC Web</h4>
                                 <p>O Educ Web é um software de gestão acadêmica pública 100% Web</p>
-                                  <a  href="educ.php">Saiba mais</a>
+                                <a  href="educ.php">Saiba mais</a>
 
                             </div>
                         </div>
@@ -408,9 +435,9 @@
                 <div class="col-sm-12 wow fadeInRight">
                     <h3 class="column-title">Nossa Historia</h3>
                     <p>A Apus nasce de uma junção de empresas de Tecnologia da Informação e Consultoria com o propósito de levar a mais alta tecnologia para maior eficiência no trato das informações de seus clientes. 
-                       Somando os esforços destas empresas a Apus conta com mais de 15 anos de atuação no mercado de TI, tanto na área pública quanto na área privada. Veja a seguir nossa missão, visão e valores:</p>
+                     Somando os esforços destas empresas a Apus conta com mais de 15 anos de atuação no mercado de TI, tanto na área pública quanto na área privada. Veja a seguir nossa missão, visão e valores:</p>
 
-                       <div class="row">
+                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="nostyle">
                                 <li><i class="fa fa-check-square"></i> Ser referência nacional em Software de Gestão</li>
@@ -653,11 +680,11 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
-                                 A Apus nasce de uma junção de empresas de Tecnologia da Informação e Consultoria com o propósito de levar a mais alta tecnologia para maior eficiência no trato das informações de seus clientes. 
-                             </div>
-                         </div>
-                     </div>
-                     <div class="panel panel-default">
+                                   A Apus nasce de uma junção de empresas de Tecnologia da Informação e Consultoria com o propósito de levar a mais alta tecnologia para maior eficiência no trato das informações de seus clientes. 
+                               </div>
+                           </div>
+                       </div>
+                       <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title">
                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -667,28 +694,28 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                 Estrada Municipal do Una, 1311 – Socorro – Pindamonhangaba/SP – CEP: 12424-720 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                 Qual nosso telefone ?
-                             </a>
-                         </h4>
-                     </div>
-                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                          (12) 9 9779-5324 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                               Estrada Municipal do Una, 1311 – Socorro – Pindamonhangaba/SP – CEP: 12424-720 
+                           </div>
+                       </div>
+                   </div>
+                   <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                               Qual nosso telefone ?
+                           </a>
+                       </h4>
+                   </div>
+                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      (12) 9 9779-5324 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    </div>
+</div>
 </div>
 </section><!--/#meet-team-->
 
@@ -877,7 +904,7 @@
                               <abbr title="Phone">Tel:</abbr> (12) 9 9779-5324
                           </address>
 
-                          <form  name="contato" method="post" action="">
+                          <form  name="contato" method="POST" >
                             <div class="form-group">
                                 <input type="text" name="nome" class="form-control" placeholder="Nome" required>
                             </div>
@@ -890,7 +917,7 @@
                             <div class="form-group">
                                 <textarea name="mensagem" class="form-control" rows="8" placeholder="Mensagem" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                            <button  onClick="Email();" class="btn btn-primary btn-block">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -898,6 +925,7 @@
         </div>
     </div>
 </section><!--/#bottom-->
+
 
 
 
