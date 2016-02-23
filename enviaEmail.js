@@ -1,4 +1,4 @@
-<script type="text/javascript">
+/* <script type="text/javascript">
 
 var service_id = 'smtp_server';
 var template_id = 'teste';
@@ -13,3 +13,4 @@ emailjs.send(service_id,template_id,template_params);
 
 
 </script>
+*/
