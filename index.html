@@ -874,7 +874,7 @@
                               <abbr title="Phone">Tel:</abbr> (12) 9 9779-5324
                           </address>
 
-                          <form  name="contato" method="POST" >
+                          <form  name="contato" onsubmit='Email()' >
                             <div class="form-group">
                                 <input type="text" name="nome" class="form-control" placeholder="Nome" required>
                             </div>
@@ -887,7 +887,7 @@
                             <div class="form-group">
                                 <textarea name="mensagem" class="form-control" rows="8" placeholder="Mensagem" required></textarea>
                             </div>
-                            <button  onClick="Email();" class="btn btn-primary btn-block">Enviar</button>
+                            <button class="btn btn-primary btn-block">Enviar</button>
                         </form>
                     </div>
                 </div>
