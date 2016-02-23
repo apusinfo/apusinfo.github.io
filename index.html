@@ -1068,33 +1068,28 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     
-        <script type="text/javascript">
-
-
-function Email(){
-  $.ajax({
-    type: "POST",
-    url: "https://mandrillapp.com/api/1.0/messages/send.json",
-    data: {
-      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
-      'message': {
-        'from_email': 'tecsof@terra.com.br',
-        'to': [
-          {
-            'email': 'paulo.pinda@gmail.com',
-            'name': 'Apus.info',
-            'type': 'to'
+<script type="text/javascript">
+    function Email(){
+      $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send.json",
+        data: {
+          'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
+          'message': {
+            'from_email': 'tecsof@terra.com.br',
+            'to': [
+              {
+                'email': 'paulo.pinda@gmail.com',
+                'name': 'Apus.info',
+                'type': 'to'
+              }
+            ],
+            'subject': 'Testando titulo',
+            'html': 'Testando texto'
           }
-        ],
-        'subject': 'Testando titulo',
-        'html': 'Testando texto'
-      }
+        }
+      });
     }
-  });
-}
-
-
-
 </script>
 </body>
 </html>
