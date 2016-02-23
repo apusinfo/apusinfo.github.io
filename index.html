@@ -25,38 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <script type="text/javascript">
-    (function(){
-      emailjs.init("user_kLou1ltlyUXPambNW7R13");
-  })();
-
-function Email(){
-  $.ajax({
-    type: "POST",
-    url: "https://mandrillapp.com/api/1.0/messages/send.json",
-    data: {
-      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
-      'message': {
-        'from_email': 'tecsof@terra.com.br',
-        'to': [
-          {
-            'email': 'tecsof@terra.com.br',
-            'name': 'Apus.info',
-            'type': 'to'
-          }
-        ],
-        'subject': 'Testando titulo',
-        'html': 'Testando texto'
-      }
-    }
-  });
-}
-
-
-
-</script>
 
 
 
@@ -1098,5 +1067,34 @@ function Email(){
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    
+        <script type="text/javascript">
+
+
+function Email(){
+  $.ajax({
+    type: "POST",
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    data: {
+      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
+      'message': {
+        'from_email': 'tecsof@terra.com.br',
+        'to': [
+          {
+            'email': 'paulo.pinda@gmail.com',
+            'name': 'Apus.info',
+            'type': 'to'
+          }
+        ],
+        'subject': 'Testando titulo',
+        'html': 'Testando texto'
+      }
+    }
+  });
+}
+
+
+
+</script>
 </body>
 </html>
