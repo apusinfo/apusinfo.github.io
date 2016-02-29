@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,42 +25,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-    (function(){
-      emailjs.init("user_kLou1ltlyUXPambNW7R13");
-  })();
-
-function Email(){
-  $.ajax({
-    type: "POST",
-    url: "https://mandrillapp.com/api/1.0/messages/send.json",
-    data: {
-      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
-      'message': {
-        'from_email': 'tecsof@terra.com.br',
-        'to': [
-          {
-            'email': 'tecsof@terra.com.br',
-            'name': 'Apus.info',
-            'type': 'to'
-          }
-        ],
-        'subject': 'Testando titulo',
-        'html': 'Testando texto'
-      }
-    }
-  });
-}
-
-
-
-</script>
-
-
-
 </head><!--/head-->
 
 <body id="home" class="homepage">
@@ -905,21 +870,26 @@ function Email(){
                               <abbr title="Phone">Tel:</abbr> (12) 9 9779-5324
                           </address>
 
-                          <form  name="contato" method="POST" >
+                          <form  name="contato" onsubmit='Email()' >
                             <div class="form-group">
-                                <input type="text" name="nome" class="form-control" placeholder="Nome" required>
+                                <input type="text" name="nome"  id="txt_nome" class="form-control" placeholder="Nome" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                <input type="email" name="email" id="txt_email" class="form-control" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="assunto" class="form-control" placeholder="Assunto" required>
+                                <input type="text" name="assunto" id="txt_assunto" class="form-control" placeholder="Assunto" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="mensagem" class="form-control" rows="8" placeholder="Mensagem" required></textarea>
+                                <textarea name="mensagem" class="form-control" id="txt_mensagem" rows="8" placeholder="Mensagem" required></textarea>
                             </div>
+<<<<<<< HEAD
                             <button  onClick="Email();" type="submit" class="btn btn-primary btn-block">Enviar</button>
+=======
+                            
+>>>>>>> origin/master
                         </form>
+                        <button class="btn btn-primary btn-block" onClick="Email()">Enviar</button>
                     </div>
                 </div>
             </div>
@@ -1110,5 +1080,41 @@ function Email(){
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+            function Email(){
+                  $.ajax({
+                    type: "POST",
+                    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            
+                    data: {
+                      'key': 'kRXUO4yB1O7oJbaWqUzkbQ',
+                      'message': {
+                        'from_email': 'contato@apus.info',
+                        'to': [
+                          {
+                            'email': 'contato@apus.info',
+                            'name': $("#txt_nome").val(),
+                            'type': 'to'
+                          }
+                        ],
+                        'subject': "[Site Apus.info] " + $("#txt_assunto").val(),
+                        'html': $("#txt_mensagem").val()
+                      }
+                    },
+            
+                    success: function(data){
+                      console.log(data);
+                      console.log("Enviou o e-mail");
+                    },
+            
+                    error: function(data){
+                      console.log(data);
+                      console.log("Não enviou o e-mail");
+                    }
+            
+                  });
+            }
+    </script>
 </body>
 </html>
